@@ -8,6 +8,10 @@ async function addPost(post) {
      */
 
     // Your code here
+
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+    posts.unshift(post);
+    localStorage.setItem('posts', JSON.stringify(posts));
 }
 
 
